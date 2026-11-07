@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08a9d2">
+  <meta name="description" content="¿Reconoces las aves que viven cerca de ti? Pon a prueba tu mirada con este test de 10 preguntas y descubre Natura Aves.">
+  <title>Natura Aves · ¿Cuánto sabes de aves?</title>
+  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <link rel="preconnect" href="https://commons.wikimedia.org">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Natura Aves, inicio"><span class="brand-mark">✳</span> NATURA <i>Aves</i></a>
+    <span class="top-note">Pequeños encuentros, grandes descubrimientos</span>
+  </header>
+
+  <main>
+    <section class="intro" id="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">UN RETO PARA OBSERVADORES CURIOSOS</p>
+        <h1>¿Sabrías reconocer<br>estas <em>10 aves</em>?</h1>
+        <p class="intro-text">Mira bien, fíjate en los detalles y descubre cuánto sabes de las aves que podemos encontrar en nuestro entorno.</p>
+        <button class="primary-btn" id="start-btn">Empezar el test <span>→</span></button>
+        <p class="micro">10 preguntas · 4 opciones · ¡A jugar!</p>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="bird-shape">✦</div>
+        <div class="intro-stamp">OBSERVA<br>· APRENDE ·<br>DESCUBRE</div>
+      </div>
+    </section>
+
+    <section class="quiz hidden" id="quiz" aria-live="polite">
+      <div class="quiz-head">
+        <div><span class="eyebrow">RETO NATURA</span><h2>¿Qué ave es esta?</h2></div>
+        <div class="counter"><strong id="current-number">01</strong><span> / 10</span></div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+      <figure class="bird-card">
+        <img id="bird-image" src="" alt="Fotografía del ave que debes identificar">
+        <figcaption><span>OBSERVA CON ATENCIÓN</span><span id="bird-hint">Una pista aparecerá al responder</span></figcaption>
+      </figure>
+      <div class="answers" id="answers"></div>
+      <div class="feedback hidden" id="feedback" role="status">
+        <div class="feedback-title" id="feedback-title"></div>
+        <p id="feedback-text"></p>
+        <button class="next-btn" id="next-btn">Siguiente ave <span>→</span></button>
+      </div>
+      <p class="quiz-foot">Las fotografías proceden de Wikimedia Commons. Créditos al final de la página.</p>
+    </section>
+
+    <section class="result hidden" id="result">
+      <p class="eyebrow">FIN DEL RECORRIDO</p>
+      <h2>¡Has completado el reto!</h2>
+      <div class="score-ring" id="score-ring"><div class="score-inner"><strong id="score">0</strong><span>de 10</span></div></div>
+      <h3 id="result-title">Buen trabajo, observador.</h3>
+      <p id="result-message"></p>
+      <div class="result-actions">
+        <button class="primary-btn" id="retry-btn">Volver a jugar <span>↻</span></button>
+      </div>
+      <div class="book-promo">
+        <div class="book-copy">
+          <p class="eyebrow">¿TE HAS QUEDADO CON GANAS DE MÁS?</p>
+          <h2>El mundo de las aves<br>está más cerca de lo que crees.</h2>
+          <p>Descubre <strong>NATURA Aves</strong>, una introducción clara y visual a la ornitología: aprende a identificar especies, conoce sus características y escucha sus cantos mediante códigos QR.</p>
+          <p class="book-author">Mario Sultan Romero</p>
+        </div>
+        <img class="book-cover" src="assets/portada-natura-aves.jpg" alt="Portada del libro Natura Aves">
+      </div>
+    </section>
+
+    <section class="book-strip" id="book-strip">
+      <div><span class="eyebrow">UN LIBRO PARA EMPEZAR A MIRAR DE OTRA MANERA</span><h2>NATURA <i>Aves</i></h2><p>Una guía breve, didáctica y rigurosa para dar tus primeros pasos en la ornitología.</p></div>
+      <a href="#book-strip" class="book-link" aria-label="Información sobre el libro">Descubre el libro <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© NATURA Aves · Mario Sultan Romero</span>
+    <a href="#credits">Fotografías y créditos</a>
+  </footer>
+  <section class="credits" id="credits">
+    <details><summary>Fotografías y atribuciones</summary>
+      <p>Las imágenes se sirven desde Wikimedia Commons. Cada enlace lleva a la ficha original, donde constan autoría y condiciones de reutilización. Las imágenes mantienen sus licencias originales.</p>
+      <ul id="credit-list"></ul>
+    </details>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
